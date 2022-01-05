@@ -3,13 +3,18 @@
 // with a provided step
 
 // Start
-function countdown() {
-    // write your code here
+function countdown(num1, step) {
+    let counter = num1 + step
+    return function subtractNumber() {
+        counter -= (step)
+        return counter
+    }
   }
   
-  // const countingDown = countdown();
+  const countingDown = countdown(22, 3);
   
-  // console.log(countingDown());
-  // console.log(countingDown());
-  // console.log(countingDown());
+  console.log(countingDown());
+  console.log(countingDown());
+  console.log(countingDown());
+  console.log(countingDown());
   
