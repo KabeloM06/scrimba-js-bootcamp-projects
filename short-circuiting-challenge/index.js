@@ -1,14 +1,17 @@
 /* Challenge 1: Let's say you're building Reddit. Only users that are either moderators or have reached a certain karma threshold are allowed to upvote. */
 
-const karma = 143;
+const karma = 101;
 const isModerator = true;
 
 // first use a ternary to set hasEnoughKarma to true if karma is above 100. If not, set it to false
 let hasEnoughKarma;
 
+hasEnoughKarma = karma > 100 ? true : false;
+console.log("hasEnoughKarma:", hasEnoughKarma)
+
 //  set the value of canUpvote with short-circuiting (using hasEnoughKarma and isModerator)
 let canUpvote;
-
+canUpvote = isModerator || hasEnoughKarma;
 console.log("canUpvote:", canUpvote);
 
 
@@ -16,7 +19,7 @@ console.log("canUpvote:", canUpvote);
 
 // set canDelete to true if both hasEnoughKarma and isModerator is true
 let canDelete;
-
+canDelete = isModerator && hasEnoughKarma;
 console.log("canDelete:", canDelete);
 
 
@@ -25,7 +28,11 @@ console.log("canDelete:", canDelete);
 const response = "JohnDoe";
 const hasValidEmail = true;
 const user = hasValidEmail && (response || "guest");
-// console.log("user: ", user);
+// 1) user is JohnDoe
+// 2) false
+// #3) guest
+
+console.log("user: ", user);
 
 
 
