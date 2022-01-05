@@ -4,7 +4,9 @@
 
 // Write your code below:
 
-
+function splitBill(totalBill, numPeople){
+return `You all pay R${Math.round(totalBill/numPeople)} each`
+}
 
 
 // Testing your solution
