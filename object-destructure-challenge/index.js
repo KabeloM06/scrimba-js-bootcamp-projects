@@ -19,4 +19,15 @@ const recommendations = {
     }
 }
 
+function getInfo(data) {
+    const { beer, coffee, music: {traditional, jazz} } = recommendations;
+    console.log(`You can drink beer at ${beer} and coffee at ${coffee}`);
+    console.log(`You can listen to traditional music at ${traditional} and jazz music at ${jazz}`);
+}
 
+// const { music: {traditional, jazz} } = recommendations;
+
+// console.log(beer, coffee);
+// console.log(traditional, jazz);
+
+getInfo(recommendations)
