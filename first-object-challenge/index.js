@@ -5,3 +5,18 @@
 // 4. Create a method on the object - greeting() -  that logs out a message to the console
 // 5. Invoke the greeting() method and also log out your favourite restaurant to the console
 
+const bar = "mojo";
+const cafe = "nkuku";
+const restaurant = "nandos";
+
+const favouritePlaces = {
+    bar,
+    cafe,
+    restaurant,
+    greeting() {
+        console.log("Sho mfanaka");
+    }
+}
+
+favouritePlaces.greeting();
+console.log(favouritePlaces.restaurant)
