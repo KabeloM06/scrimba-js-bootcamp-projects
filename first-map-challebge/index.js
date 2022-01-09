@@ -4,8 +4,18 @@
 // 3. Add an integer property 'averageBill' with how much you spend there on average
 // 4. Fetch one of the properties using the get() method
 
-const favouritePlace = {
-    music: "jazz",
-    name: "Paris House"
-};
+// const favouritePlace = {
+//     music: "jazz",
+//     name: "Paris House"
+// };
 
+const favouritePlace = new Map ([
+    ['music', 'jazz'],
+    ['name', 'Paris House'],
+    ['visited', true],
+    ['averageBill', 248.24],
+])
+
+console.log(`Did you visit ${favouritePlace.get('name')}?: ${favouritePlace.get('visited')}`);
+
+console.log(favouritePlace)
