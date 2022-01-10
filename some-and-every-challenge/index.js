@@ -12,3 +12,8 @@ const songs = [
     {song: "Thinking Out Loud", timesStreamed: 1.461, wonGrammy: true}
 ]
 
+const someGrammy = songs.some(songs => songs.wonGrammy);
+console.log(`Have any of the songs won a Grammy?: ${someGrammy}`);
+
+const onePointFiveStreams = songs.every(songs => songs.timesStreamed >= 1.5);
+console.log(`Have all the songs been streamed at least 1.5 million times?: ${onePointFiveStreams}`)
