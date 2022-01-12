@@ -5,6 +5,24 @@
 
 // Beginning:
 
-function Book() {
+function Book(id, title, author, themes = []) {
 	// your code here
+    this.id = id;
+    this.title = title;
+    this.author = author;
+    this.themes = themes;
 }
+
+const book1 = new Book (1, 'Hary Potter', 'J.K. Rowling');
+const book2 = new Book (2, 'Dune', 'Frank Herbert');
+
+Book.prototype.addTheme = function(newTheme) {
+	this.themes = [...this.themes, newTheme];
+}
+
+
+
+book1.addTheme('Fantasy');
+book2.addTheme('Fantasy');
+
+console.log(book1, book2);
