@@ -7,6 +7,27 @@
 // Beginning:
 class Film {
 	//Your code here.
+    constructor(id, title, director, releaseYear, genres = []) {
+        this.id = id;
+        this.title = title;
+        this.director = director;
+        this.releaseYear = releaseYear;
+        this.genres = genres;
+    }
+
+    addGenre(genre) {
+        this.genres = [...this.genres, genre];
+    }
+
+    getFilmTitle() {
+        return `Film: ${this.title}`;
+    }
 }
 
 // Rest of your code here. 
+
+const myFavouriteFilm = new Film(1, "Harry Potter", "Various", "2001");
+console.log(myFavouriteFilm.director)
+myFavouriteFilm.addGenre("Fantasy");
+console.log(myFavouriteFilm.genres)
+console.log(myFavouriteFilm.getFilmTitle());
