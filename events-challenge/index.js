@@ -8,4 +8,14 @@
 // in Scrimba web browser. Finally, try to trigger the event when you
 // hover the mouse over the elements, instead of when clicking on them
   
-  
+  const title = document.querySelector('h1')
+  title.addEventListener('click', event => {
+      console.log(event.target.textContent)
+  })
+
+//   document.body.addEventListener('click', event => {
+//     console.log(event.target.textContent);
+//   });
+//   document.body.addEventListener('mouseover', event => {
+//     console.log(event.target.textContent);
+//   });
