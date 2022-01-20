@@ -8,14 +8,20 @@
 
 // Challenge stub code: 
 
+import getUser from "./utils/getUser.js";
+
 class App {
     constructor() {
       this.render();
     } 
     
     render() {
-      document.getElementById('root').innerHTML = `
-        <div>getUser function results should go here</div>
+        const user = getUser();
+        console.log(user);
+        document.getElementById('root').innerHTML = `
+        <div>${user.name} works for ${user.company}</div>
       `
     }
   }
+
+  new App();
